@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+   <!-- Header -->
+<header class="bg-gray-800 text-white py-6 shadow-lg relative z-50">
+    <div class="container mx-auto flex justify-between items-center px-6">
+        <h1 class="text-3xl font-bold">Flight Booking</h1>
+
+        <!-- Hamburger Icon for Mobile -->
+        <button id="menu-toggle" class="lg:hidden focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav class="fixed inset-0 bg-gray-700 text-white transform translate-x-full transition-transform duration-300 lg:relative lg:translate-x-0 lg:bg-transparent lg:flex" id="nav-menu">
+            <!-- Close Button (X) for Mobile -->
+            <button id="close-menu" class="absolute top-6 right-6 lg:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <ul class="flex flex-col items-center justify-center h-full space-y-8 lg:flex-row lg:space-y-0 lg:space-x-6">
+                <li><a href="index.html" class="hover:text-gray-400 transition duration-300 text-2xl lg:text-base">Home</a></li>
+                <li><a href="flights.html" class="hover:text-gray-400 transition duration-300 text-2xl lg:text-base">Flights</a></li>
+                <li><a href="bookings.html" class="hover:text-gray-400 transition duration-300 text-2xl lg:text-base">My Bookings</a></li>
+                <li><a href="confirmation.html" class="hover:text-gray-400 transition duration-300 text-2xl lg:text-base">Confirmation</a></li>
+                <li><a href="passenger.html" class="hover:text-gray-400 transition duration-300 text-2xl lg:text-base">Passenger</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="relative w-full overflow-hidden">
+    <div class="mySlides">
+        <img src="images/photo1.jpg" alt="Slide 1" class="w-full aspect-[16/9] object-cover">
+    </div>
+    <div class="mySlides">
+        <img src="images/photo2.jpg" alt="Slide 2" class="w-full aspect-[16/9] object-cover">
+    </div>
+    <div class="mySlides">
+        <img src="images/photo3.jpg" alt="Slide 3" class="w-full aspect-[16/9] object-cover">
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-4xl hover:text-gray-300 transition duration-300" onclick="plusSlides(-1)">
+        <i class="fas fa-chevron-left drop-shadow-lg"></i>
+    </button>
+    <button class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-4xl hover:text-gray-300 transition duration-300" onclick="plusSlides(1)">
+        <i class="fas fa-chevron-right drop-shadow-lg"></i>
+    </button>
+</div>
+    <!-- Flight Services Section -->
+    <div class="our-service py-12 px-4 md:px-7">
+        <div class="service-heading text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8 animate-bounce">Our Flight Services</h2>
+        </div>
+        <div class="main-services grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
+            <!-- Flight Booking -->
+            <div class="inner-services p-8 text-center shadow-lg border-2 border-gray-700 hover:border-gray-900 hover:bg-gray-50 hover:-translate-y-2 transition-transform duration-300">
+                <div class="service-icon mx-auto w-24 h-24 rounded-full border-2 border-gray-700 bg-gray-100 flex items-center justify-center hover:w-28 hover:h-28 hover:rounded-none hover:bg-gray-500 transition-all duration-300">
+                    <i class="fa-solid fa-plane text-gray-700 text-4xl hover:text-white"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mt-6 text-gray-900">Flight Booking</h3>
+                <p class="text-lg mt-4 leading-relaxed text-gray-700">Book your flights easily and securely with our user-friendly booking system.</p>
+            </div>
+    
+            <!-- Flight Status -->
+            <div class="inner-services p-8 text-center shadow-lg border-2 border-gray-700 hover:border-gray-900 hover:bg-gray-50 hover:-translate-y-2 transition-transform duration-300">
+                <div class="service-icon mx-auto w-24 h-24 rounded-full border-2 border-gray-700 bg-gray-100 flex items-center justify-center hover:w-28 hover:h-28 hover:rounded-none hover:bg-gray-500 transition-all duration-300">
+                    <i class="fa-solid fa-clock text-gray-700 text-4xl hover:text-white"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mt-6 text-gray-900">Flight Status</h3>
+                <p class="text-lg mt-4 leading-relaxed text-gray-700">Check real-time flight status and updates for your upcoming trips.</p>
+            </div>
+    
+            <!-- Baggage Information -->
+            <div class="inner-services p-8 text-center shadow-lg border-2 border-gray-700 hover:border-gray-900 hover:bg-gray-50 hover:-translate-y-2 transition-transform duration-300">
+                <div class="service-icon mx-auto w-24 h-24 rounded-full border-2 border-gray-700 bg-gray-100 flex items-center justify-center hover:w-28 hover:h-28 hover:rounded-none hover:bg-gray-500 transition-all duration-300">
+                    <i class="fa-solid fa-suitcase text-gray-700 text-4xl hover:text-white"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mt-6 text-gray-900">Baggage Info</h3>
+                <p class="text-lg mt-4 leading-relaxed text-gray-700">Get detailed information about baggage policies and restrictions.</p>
+            </div>
+    
+            <!-- Customer Support -->
+            <div class="inner-services p-8 text-center shadow-lg border-2 border-gray-700 hover:border-gray-900 hover:bg-gray-50 hover:-translate-y-2 transition-transform duration-300">
+                <div class="service-icon mx-auto w-24 h-24 rounded-full border-2 border-gray-700 bg-gray-100 flex items-center justify-center hover:w-28 hover:h-28 hover:rounded-none hover:bg-gray-500 transition-all duration-300">
+                    <i class="fa-solid fa-headset text-gray-700 text-4xl hover:text-white"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mt-6 text-gray-900">Customer Support</h3>
+                <p class="text-lg mt-4 leading-relaxed text-gray-700">24/7 customer support to assist you with any inquiries or issues.</p>
+            </div>
+    
+            <!-- Travel Insurance -->
+            <div class="inner-services p-8 text-center shadow-lg border-2 border-gray-700 hover:border-gray-900 hover:bg-gray-50 hover:-translate-y-2 transition-transform duration-300">
+                <div class="service-icon mx-auto w-24 h-24 rounded-full border-2 border-gray-700 bg-gray-100 flex items-center justify-center hover:w-28 hover:h-28 hover:rounded-none hover:bg-gray-500 transition-all duration-300">
+                    <i class="fa-solid fa-shield-alt text-gray-700 text-4xl hover:text-white"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mt-6 text-gray-900">Travel Insurance</h3>
+                <p class="text-lg mt-4 leading-relaxed text-gray-700">Comprehensive travel insurance plans for a worry-free journey.</p>
+            </div>
+    
+            <!-- Airport Transfers -->
+            <div class="inner-services p-8 text-center shadow-lg border-2 border-gray-700 hover:border-gray-900 hover:bg-gray-50 hover:-translate-y-2 transition-transform duration-300">
+                <div class="service-icon mx-auto w-24 h-24 rounded-full border-2 border-gray-700 bg-gray-100 flex items-center justify-center hover:w-28 hover:h-28 hover:rounded-none hover:bg-gray-500 transition-all duration-300">
+                    <i class="fa-solid fa-taxi text-gray-700 text-4xl hover:text-white"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mt-6 text-gray-900">Airport Transfers</h3>
+                <p class="text-lg mt-4 leading-relaxed text-gray-700">Convenient airport transfer services to get you to and from the airport.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Available Flights Section -->
+    <div class="container mx-auto p-6">
+        <div class="service-heading text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-8 animate-bounce">Available Flights</h2>
+        </div>
+        <div id="flights" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 6 Flights will be dynamically added here -->
+        </div>
+        <div class="text-center mt-6">
+            <a href="flights.html" class="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition duration-300">Show More</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <p class="text-gray-400">Email: yahya@flightbooking.com</p>
+                    <p class="text-gray-400">Phone: 0934065671</p>
+                    <p class="text-gray-400">Address:  Syria, Latakia</p>
+                </div>
+        
+                <div class="text-center">
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="flights.html" class="text-gray-400 hover:text-white transition duration-300">Flights</a></li>
+                        <li><a href="bookings.html" class="text-gray-400 hover:text-white transition duration-300">My Bookings</a></li>
+                    </ul>
+                </div>
+              
+                <div class="text-center md:text-right">
+                    <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                    <div class="flex justify-center md:justify-end space-x-4">
+                        <!-- LinkedIn Icon -->
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in text-2xl"></i>
+                        </a>
+                
+                        <!-- Twitter Icon -->
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                
+                        <!-- Facebook Icon -->
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center">
+                <p class="text-gray-400">&copy; 2023 Flight Booking System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

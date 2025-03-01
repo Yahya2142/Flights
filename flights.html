@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights - Flight Booking System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+<!-- Header -->
+<header class="bg-gray-800 text-white py-6 shadow-lg relative z-50">
+    <div class="container mx-auto flex justify-between items-center px-6">
+        <h1 class="text-3xl font-bold">Flight Booking</h1>
+
+        <!-- Hamburger Icon for Mobile -->
+        <button id="menu-toggle" class="lg:hidden focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav class="fixed inset-0 bg-gray-700 text-white transform translate-x-full transition-transform duration-300 lg:relative lg:translate-x-0 lg:bg-transparent lg:flex" id="nav-menu">
+            <!-- Close Button (X) for Mobile -->
+            <button id="close-menu" class="absolute top-6 right-6 lg:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <ul class="flex flex-col items-center justify-center h-full space-y-8 lg:flex-row lg:space-y-0 lg:space-x-6">
+                <li><a href="index.html" class="hover:text-gray-400 transition duration-300 text-2xl lg:text-base">Home</a></li>
+                <li><a href="flights.html" class="hover:text-gray-400 transition duration-300 text-2xl lg:text-base">Flights</a></li>
+                <li><a href="bookings.html" class="hover:text-gray-400 transition duration-300 text-2xl lg:text-base">My Bookings</a></li>
+                <li><a href="confirmation.html" class="hover:text-gray-400 transition duration-300 text-2xl lg:text-base">Confirmation</a></li>
+                <li><a href="passenger.html" class="hover:text-gray-400 transition duration-300 text-2xl lg:text-base">Passenger</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+        <div id="flights" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 15 Flights will be dynamically added here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <p class="text-gray-400">Email: yahya@flightbooking.com</p>
+                    <p class="text-gray-400">Phone: 0934065671</p>
+                    <p class="text-gray-400">Address:  Syria, Latakia</p>
+                </div>
+        
+                <div class="text-center">
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="flights.html" class="text-gray-400 hover:text-white transition duration-300">Flights</a></li>
+                        <li><a href="bookings.html" class="text-gray-400 hover:text-white transition duration-300">My Bookings</a></li>
+                    </ul>
+                </div>
+              
+                <div class="text-center md:text-right">
+                    <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                    <div class="flex justify-center md:justify-end space-x-4">
+                        <!-- LinkedIn Icon -->
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in text-2xl"></i>
+                        </a>
+                
+                        <!-- Twitter Icon -->
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                
+                        <!-- Facebook Icon -->
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center">
+                <p class="text-gray-400">&copy; 2023 Flight Booking System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
